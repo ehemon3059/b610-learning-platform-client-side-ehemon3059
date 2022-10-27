@@ -1,0 +1,10 @@
+.signup{
+    width: 30%  !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .signup{
+        width: 100% !important;
+      
+    }
+  }

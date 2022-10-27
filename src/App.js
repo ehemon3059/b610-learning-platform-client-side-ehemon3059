@@ -1,5 +1,5 @@
 
-import './App.css';
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Main from './Layout/Main';
@@ -7,9 +7,11 @@ import Home from './Components/Home/Home';
 import Courses from './Components/Courses/Courses';
 import Blogs from './Components/Blogs/Blogs';
 import Faq from './Components/FAQ/Faq';
+import Login from './Components/Login/Login';
+import SignUp from './Components/SignUp/SignUp';
 
 function App() {
-  const route = createBrowserRouter([
+  const router = createBrowserRouter([
 
     {
       path: '/',
@@ -30,6 +32,14 @@ function App() {
         {
           path:"/faq",
           element: <Faq></Faq>
+        },
+        {
+          path:"/login",
+          element: <Login></Login>
+        },
+        {
+          path:"/signup",
+          element: <SignUp></SignUp>
         }
 
       ]
@@ -37,8 +47,8 @@ function App() {
 
   ])
   return (
-    <div className="App">
-      <RouterProvider router={route}></RouterProvider>
+    <div className="">
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
