@@ -17,7 +17,14 @@ console.log(category);
             <Card.Body>
                 <Card.Title>{category.course_name}</Card.Title>
                 <Card.Text>
-                {category.details}
+
+                {
+                        category.details.length > 250 ? 
+                        <p>{category.details.slice(0,250) + '...' } </p>
+                        :
+                        <p>{category.details}</p>
+                    }
+                {/* {category.details} */}
                 </Card.Text>
                 <Link to={`/courses/${category.id}`}>
                         <Button variant="primary">Details</Button>

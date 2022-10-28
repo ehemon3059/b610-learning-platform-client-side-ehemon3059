@@ -11,6 +11,7 @@ import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 
 import SingleCard from './Components/SingleCard/SingleCard';
+import PrivateRoutes from './PrivateRoutes/PrivateRoutes';
 
 function App() {
   const router = createBrowserRouter([
@@ -29,7 +30,7 @@ function App() {
         },
         {
           path:"/courses/:id",
-          element: <SingleCard></SingleCard>,
+          element: <PrivateRoutes><SingleCard></SingleCard></PrivateRoutes>,
           loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
         },
         
