@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 
 
@@ -18,7 +19,9 @@ console.log(category);
                 <Card.Text>
                 {category.details}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Link to={`/courses/${category.id}`}>
+                        <Button variant="primary">Details</Button>
+                    </Link>
             </Card.Body>
         </Card>
     );

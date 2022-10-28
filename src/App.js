@@ -9,7 +9,8 @@ import Blogs from './Components/Blogs/Blogs';
 import Faq from './Components/FAQ/Faq';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
-import CoursesDetails from './Components/CoursesDetails/CoursesDetails';
+
+import SingleCard from './Components/SingleCard/SingleCard';
 
 function App() {
   const router = createBrowserRouter([
@@ -25,6 +26,11 @@ function App() {
         {
           path:"/courses",
           element: <Courses></Courses>
+        },
+        {
+          path:"/courses/:id",
+          element: <SingleCard></SingleCard>,
+          loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
         },
         
         {

@@ -19,7 +19,7 @@ const Courses = () => {
         <div>
             <div className="course-container">
                 <div className="courses-list shadow">
-                    <h2>All Courses {categories.length}</h2>
+                    <h2>full stack development {categories.length}</h2>
                     {
                         categories.map(category => <p key={category.id}>{category.course_name}</p>)
                     }
