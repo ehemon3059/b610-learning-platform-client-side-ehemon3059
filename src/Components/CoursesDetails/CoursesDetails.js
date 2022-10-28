@@ -1,12 +1,26 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-const CoursesDetails = () => {
+
+
+const CoursesDetails = ({category}) => {
+
+console.log(category);
+
 
     
     return (
-        <div>
-            <h2>This is Course details 555555555555555</h2>
-        </div>
+        <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={category.img_URL} />
+            <Card.Body>
+                <Card.Title>{category.course_name}</Card.Title>
+                <Card.Text>
+                {category.details}
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+        </Card>
     );
 };
 

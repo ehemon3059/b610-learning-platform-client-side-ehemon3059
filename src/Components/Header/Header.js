@@ -50,7 +50,7 @@ const Header = () => {
                         <Nav.Link eventKey={2} href="#memes">
                         {
                             user?.photoURL ?
-                            <Image roundedCircle style={{height:'30px'}} src={user?.photoURL}></Image>
+                            <Image roundedCircle style={{height:'30px'}} src={user?.photoURL}  data-bs-toggle="tooltip" data-bs-placement="top" title={user?.displayName}></Image>
                             :
                             <FaUser></FaUser>
                         }

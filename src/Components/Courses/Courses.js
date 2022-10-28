@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import CoursesDetails from '../CoursesDetails/CoursesDetails';
 
 import './Courses.css'
@@ -18,15 +18,17 @@ const Courses = () => {
     return (
         <div>
             <div className="course-container">
-                <div className="courses-list">
+                <div className="courses-list shadow">
                     <h2>All Courses {categories.length}</h2>
                     {
-                        categories.map(category => <p key={category.id}><Link to={`/category/${category.id}`}>{category.course_name}</Link></p>)
+                        categories.map(category => <p key={category.id}>{category.course_name}</p>)
                     }
                 </div>
 
                 <div className="course-details">
-                    <CoursesDetails></CoursesDetails>
+                    {
+                        categories.map(category => <CoursesDetails key={category.id} category={category}></CoursesDetails> )
+                    }
                 </div>
                
             </div>

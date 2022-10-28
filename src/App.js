@@ -26,11 +26,7 @@ function App() {
           path:"/courses",
           element: <Courses></Courses>
         },
-        {
-          path: '/category/:id',
-          element: <CoursesDetails></CoursesDetails>,
-          loader :(({params})=> fetch(`http://localhost:5000/category/${params.id}`))
-      },
+        
         {
           path:"/blogs",
           element: <Blogs></Blogs>

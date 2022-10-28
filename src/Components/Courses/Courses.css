@@ -2,3 +2,15 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
+.course-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 30px 30px;
+}
+.courses-list{
+    margin: 40px 30px;
+    
+    text-align: center;
+    padding-top: 30px;
+}
