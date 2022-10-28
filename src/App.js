@@ -9,6 +9,7 @@ import Blogs from './Components/Blogs/Blogs';
 import Faq from './Components/FAQ/Faq';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
+import CoursesDetails from './Components/CoursesDetails/CoursesDetails';
 
 function App() {
   const router = createBrowserRouter([
@@ -25,6 +26,11 @@ function App() {
           path:"/courses",
           element: <Courses></Courses>
         },
+        {
+          path: '/category/:id',
+          element: <CoursesDetails></CoursesDetails>,
+          loader :(({params})=> fetch(`http://localhost:5000/category/${params.id}`))
+      },
         {
           path:"/blogs",
           element: <Blogs></Blogs>
