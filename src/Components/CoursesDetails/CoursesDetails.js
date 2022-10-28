@@ -27,7 +27,7 @@ console.log(category);
                 {/* {category.details} */}
                 </Card.Text>
                 <Link to={`/courses/${category.id}`}>
-                        <Button variant="primary">Details</Button>
+                        <Button variant="primary">premium access</Button>
                     </Link>
             </Card.Body>
         </Card>
